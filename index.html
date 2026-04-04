@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashcam Rejection Outlook</title>
+<title>Power Bank Rejection Outlook</title>
 <!-- Libraries -->
 <script src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -67,7 +67,7 @@
   <div class="header-box">
       <img src="https://i.postimg.cc/5y7SN4xc/logo.png" class="logo" alt="Logo" crossorigin="anonymous">
       <div>
-          <h3 style="margin:0; text-align:center;">Dashcam Rejection Outlook</h3>
+          <h3 style="margin:0; text-align:center;">Power Bank Rejection Outlook</h3>
           <small style="color:#777;">Production Quality System</small>
       </div>
   </div>
@@ -85,8 +85,8 @@
           <div><label>To Date</label><input type="date" id="d_to"></div>
           <div style="display:flex; align-items:end; gap:10px;">
               <button class="btn-main" style="padding:10px;" onclick="renderDash()">Filter Data</button>
-              <button class="btn-sm btn-pdf" style="padding:10px;" onclick="dlPdf('dashboard', 'Dashboard_Report')"><i class="fas fa-file-pdf"></i> PDF</button>
-              <button class="btn-sm btn-excel" style="padding:10px;" onclick="exportTableToExcel('dashboard', 'Dashboard_Data')"><i class="fas fa-file-excel"></i> Excel</button>
+              <button class="btn-sm btn-pdf" style="padding:10px;" onclick="dlPdf('dashboard', 'PB_Dashboard_Report')"><i class="fas fa-file-pdf"></i> PDF</button>
+              <button class="btn-sm btn-excel" style="padding:10px;" onclick="exportTableToExcel('dashboard', 'PB_Dashboard_Data')"><i class="fas fa-file-excel"></i> Excel</button>
           </div>
       </div>
       <div class="kpi-row">
@@ -109,7 +109,7 @@
 
   <div id="entry" class="tab-page" style="display:none;">
       <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-          <h4 style="margin:0; color:var(--primary);">📝 New Production Record</h4>
+          <h4 style="margin:0; color:var(--primary);">📝 New Power Bank Production Record</h4>
           <button class="btn-sm" style="background:#6c757d;" onclick="resetForm()">Reset Form</button>
       </div>
       <input type="hidden" id="edit_batch_id">
@@ -138,7 +138,7 @@
           </div>
       </div>
       <div id="top3_container" class="top3-box">
-          <h4 style="margin-top:0; color:#0d6efd;"><i class="fas fa-chart-pie"></i> Top 3 Defects & Action Plan</h4>
+          <h4 style="margin-top:0; color:#0d6efd;"><i class="fas fa-chart-pie"></i> Top Issues & Action Plan</h4>
           <div class="top3-grid">
               <div style="flex:1; min-width:300px; height:250px; background:white; padding:5px; border-radius:5px;" id="top3_chart"></div>
               <div style="flex:1.5; min-width:350px;">
@@ -158,14 +158,14 @@
           <div><label>To</label><input type="date" id="r_to"></div>
           <div style="display:flex; align-items:end; gap:10px;">
               <button class="btn-main" style="padding:10px;" onclick="genReport('overall')">Generate</button>
-              <button class="btn-sm btn-pdf" style="padding:12px;" onclick="dlPdf('rep_area', 'Overall_Report')"><i class="fas fa-file-pdf"></i> PDF</button>
-              <button class="btn-sm btn-excel" style="padding:12px;" onclick="exportTableToExcel('rep_area', 'Overall_Report')"><i class="fas fa-file-excel"></i> Excel</button>
+              <button class="btn-sm btn-pdf" style="padding:12px;" onclick="dlPdf('rep_area', 'PB_Overall_Report')"><i class="fas fa-file-pdf"></i> PDF</button>
+              <button class="btn-sm btn-excel" style="padding:12px;" onclick="exportTableToExcel('rep_area', 'PB_Overall_Report')"><i class="fas fa-file-excel"></i> Excel</button>
           </div>
       </div>
       <div id="rep_area" style="display:none; padding:30px; border:1px solid #ddd; margin-top:20px; background:#fff;">
           <div style="display:flex; justify-content:space-between; border-bottom:2px solid #333; padding-bottom:10px;">
               <img src="https://i.postimg.cc/5y7SN4xc/logo.png" style="height:50px;">
-              <div style="text-align:right;"><h2 style="margin:0;">OVERALL QUALITY REPORT</h2><p style="margin:0;"><b>Period:</b> <span id="r_period"></span></p></div>
+              <div style="text-align:right;"><h2 style="margin:0;">OVERALL PB QUALITY REPORT</h2><p style="margin:0;"><b>Period:</b> <span id="r_period"></span></p></div>
           </div>
           <table style="width:100%; border:1px solid #ddd; margin:20px 0; text-align:center;" border="1">
               <tr style="background:#f8f9fa;">
@@ -193,14 +193,14 @@
           <div><label>Model</label><select id="m_select"><option>Select Model</option></select></div>
           <div style="display:flex; align-items:end; gap:10px;">
               <button class="btn-main" style="padding:10px; background:#6f42c1;" onclick="genReport('model')">View Analysis</button>
-              <button class="btn-sm btn-pdf" style="padding:12px;" onclick="dlPdf('mod_area', 'Model_Report')"><i class="fas fa-file-pdf"></i> PDF</button>
-              <button class="btn-sm btn-excel" style="padding:12px;" onclick="exportTableToExcel('mod_area', 'Model_Report')"><i class="fas fa-file-excel"></i> Excel</button>
+              <button class="btn-sm btn-pdf" style="padding:12px;" onclick="dlPdf('mod_area', 'PB_Model_Report')"><i class="fas fa-file-pdf"></i> PDF</button>
+              <button class="btn-sm btn-excel" style="padding:12px;" onclick="exportTableToExcel('mod_area', 'PB_Model_Report')"><i class="fas fa-file-excel"></i> Excel</button>
           </div>
       </div>
       <div id="mod_area" style="display:none; padding:30px; border:1px solid #ddd; margin-top:20px; background:#fff;">
           <div style="display:flex; justify-content:space-between; border-bottom:2px solid #6f42c1; padding-bottom:10px;">
               <img src="https://i.postimg.cc/5y7SN4xc/logo.png" style="height:50px;">
-              <div style="text-align:right;"><h2 style="margin:0; color:#6f42c1;">MODEL WISE PERFORMANCE</h2><p style="margin:0;"><b id="m_title_disp">--</b></p></div>
+              <div style="text-align:right;"><h2 style="margin:0; color:#6f42c1;">PB MODEL WISE PERFORMANCE</h2><p style="margin:0;"><b id="m_title_disp">--</b></p></div>
           </div>
           <table style="width:100%; border:1px solid #ddd; margin:20px 0; text-align:center;" border="1">
               <tr style="background:#f3e5f5;">
@@ -238,8 +238,8 @@
 </div>
 
 <script>
-// REPLACE WITH YOUR NEW SCRIPT URL
-const API_URL = "https://script.google.com/macros/s/AKfycby_4eRM7rqFZE0izKarYwcuqTei2QNWWIstWJ0z-wDbCMQ3K19CgPNtzHU3-XBr00L4/exec"; 
+// UPDATE THE URL BELOW WITH YOUR NEW GOOGLE APPS SCRIPT DEPLOYMENT URL
+const API_URL = "https://script.google.com/macros/s/AKfycbwZd984GoT6cpdojr5_VmVLHnMI74mWHb4-4J9aL3hGZ4BnyvGsJl0fSgE1-byoDljl_A/exec"; 
 const GEMINI_API_KEY = "AIzaSyDwFbj25ROQX52IzObhVIW_6t61O5TC2pA"; 
 
 let allData = [];
@@ -290,6 +290,7 @@ function exportTableToExcel(elementId, filename) {
 }
 
 async function loadData() {
+    if(API_URL.includes("INSERT_YOUR")) return;
     let res = await fetch(API_URL);
     let j = await res.json();
     allData = j.data;
@@ -311,10 +312,13 @@ function renderDash() {
     let modelMap = {}, defectMap = {}, groupedData = {};
 
     allData.forEach((r) => {
-        let rowDate = r[1].split('T')[0];
-        if(!rowDate || rowDate < from || rowDate > to) return;
+        let rawDate = r[1];
+        if(!rawDate) return;
+        let rowDate = rawDate.includes('T') ? rawDate.split('T')[0] : rawDate;
+        
+        if(rowDate < from || rowDate > to) return;
         let bid = r[0]; 
-        if (!groupedData[bid]) groupedData[bid] = { id: bid, date: r[1], line: r[2], model: r[3], input: +r[4] || 0, defects: [] };
+        if (!groupedData[bid]) groupedData[bid] = { id: bid, date: rowDate, line: r[2], model: r[3], input: +r[4] || 0, defects: [] };
         let defName = r[5], defType = r[6], defQty = +r[7] || 0;
         if (defName && defName !== "No Defect") {
             groupedData[bid].defects.push({ name: defName, type: defType, qty: defQty, ana: r[8], action: r[9] });
@@ -327,15 +331,13 @@ function renderDash() {
         let rmdSum = item.defects.filter(d => d.type === 'RMD').reduce((a,b)=>a+b.qty,0);
         let smtSum = item.defects.filter(d => d.type === 'SMT').reduce((a,b)=>a+b.qty,0);
         let procSum = item.defects.filter(d => d.type === 'Process').reduce((a,b)=>a+b.qty,0);
-        
         kpi.prod += item.input; kpi.rmdD += rmdSum; kpi.smtD += smtSum; kpi.procD += procSum;
         if(!modelMap[item.model]) modelMap[item.model] = {def:0, inp:0};
         modelMap[item.model].def += (rmdSum + smtSum + procSum); modelMap[item.model].inp += item.input;
-        
         let rmdPer = item.input ? ((rmdSum / item.input) * 100).toFixed(2) + "%" : "0%";
         let smtPer = item.input ? ((smtSum / item.input) * 100).toFixed(2) + "%" : "0%";
         let procPer = item.input ? ((procSum / item.input) * 100).toFixed(2) + "%" : "0%";
-        tbody.innerHTML += `<tr><td>${item.date.split('T')[0]}</td><td>${item.line}</td><td>${item.model}</td><td>${item.input}</td><td style="color:#b38600; font-weight:bold; background:#fff3cd;">${rmdPer}</td><td style="color:#084298; font-weight:bold; background:#cfe2ff;">${smtPer}</td><td style="color:#dc3545; font-weight:bold; background:#f8d7da;">${procPer}</td><td style="display:flex; gap:5px; justify-content:center;"><button class="btn-sm" style="background:#17a2b8" onclick="edit('${encodeURIComponent(JSON.stringify(item))}')">Edit</button><button class="btn-sm" style="background:#dc3545" onclick="deleteData('${item.id}')">🗑</button></td></tr>`;
+        tbody.innerHTML += `<tr><td>${item.date}</td><td>${item.line}</td><td>${item.model}</td><td>${item.input}</td><td style="color:#b38600; font-weight:bold; background:#fff3cd;">${rmdPer}</td><td style="color:#084298; font-weight:bold; background:#cfe2ff;">${smtPer}</td><td style="color:#dc3545; font-weight:bold; background:#f8d7da;">${procPer}</td><td style="display:flex; gap:5px; justify-content:center;"><button class="btn-sm" style="background:#17a2b8" onclick="edit('${encodeURIComponent(JSON.stringify(item))}')">Edit</button><button class="btn-sm" style="background:#dc3545" onclick="deleteData('${item.id}')">🗑</button></td></tr>`;
     });
     document.getElementById('k_prod').innerText = kpi.prod;
     document.getElementById('k_rmd').innerText = kpi.prod ? ((kpi.rmdD / kpi.prod) * 100).toFixed(2) + "%" : "0%";
@@ -377,25 +379,18 @@ function genReport(type) {
         document.getElementById('m_title_disp').innerText = `Model: ${filterModel} | ${start} to ${end}`;
     }
     document.getElementById(areaId).style.display = 'block';
-    let filtered = allData.filter(r => {
-        let d = r[1].split('T')[0];
-        return d >= start && d <= end && (!filterModel || r[3] === filterModel);
-    });
+    let filtered = allData.filter(r => { let d = r[1].includes('T') ? r[1].split('T')[0] : r[1]; return d >= start && d <= end && (!filterModel || r[3] === filterModel); });
     if(filtered.length === 0) return alert("No data found");
     let totalInp = 0, totalDef = 0, dateMap = {}, modelMap = {}, defectsMap = {}, batchMap = {};
     filtered.forEach(r => {
-        let bid = r[0];
-        if(!batchMap[bid]) { batchMap[bid] = { input: +r[4]||0, date: r[1].split('T')[0], model: r[3], defects: [] }; totalInp += +r[4]||0; }
+        let bid = r[0]; let d = r[1].includes('T') ? r[1].split('T')[0] : r[1];
+        if(!batchMap[bid]) { batchMap[bid] = { input: +r[4]||0, date: d, model: r[3], defects: [] }; totalInp += +r[4]||0; }
         if(r[5] && r[5] !== "No Defect") { batchMap[bid].defects.push({ name: r[5], qty: +r[7]||0, type: r[6], ana: r[8] }); totalDef += +r[7]||0; }
     });
     Object.values(batchMap).forEach(b => {
         if(!modelMap[b.model]) modelMap[b.model] = {i:0, d:0}; modelMap[b.model].i += b.input;
         if(!dateMap[b.date]) dateMap[b.date] = {i:0, d:0}; dateMap[b.date].i += b.input;
-        b.defects.forEach(df => {
-            dateMap[b.date].d += df.qty; modelMap[b.model].d += df.qty;
-            if(!defectsMap[df.name]) defectsMap[df.name] = {qty:0, type: df.type, ana:[]};
-            defectsMap[df.name].qty += df.qty; if(df.ana && !defectsMap[df.name].ana.includes(df.ana)) defectsMap[df.name].ana.push(df.ana);
-        });
+        b.defects.forEach(df => { dateMap[b.date].d += df.qty; modelMap[b.model].d += df.qty; if(!defectsMap[df.name]) defectsMap[df.name] = {qty:0, type: df.type, ana:[]}; defectsMap[df.name].qty += df.qty; if(df.ana && !defectsMap[df.name].ana.includes(df.ana)) defectsMap[df.name].ana.push(df.ana); });
     });
     if(type === 'overall') {
         document.getElementById('r_inp').innerText = totalInp; document.getElementById('r_def').innerText = totalDef;
@@ -478,7 +473,7 @@ function showPreview() {
     let top3Rows = "";
     aggregated.forEach((item, i) => { let rate = d.input ? ((item.qty / d.input) * 100).toFixed(2) + "%" : "0%"; let act = actionPlanMap[item.name] || "<i>Pending...</i>"; top3Rows += `<tr style="background:#fffcf5;"><td>#${i+1}</td><td><b>${item.name}</b></td><td>${item.qty}</td><td style="color:red;">${rate}</td><td style="font-size:12px;">${[...new Set(item.ana)].join(', ')}</td><td style="color:green; font-weight:bold;">${act}</td></tr>`; });
     let chartImg = chartInstances['top3_chart'] ? `<div style="text-align:center; margin:10px 0; border:1px solid #eee; padding:5px;"><img src="${chartInstances['top3_chart'].getImageURI()}" style="width:100%; max-width:400px;"></div>` : "";
-    let html = `<div style="padding:20px; background:white;"><div style="display:flex; align-items:center; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:15px;"><img src="https://i.postimg.cc/5y7SN4xc/logo.png" style="height:50px; margin-right:15px;" crossorigin="anonymous"><div><h3 style="margin:0; color:#007bff;">Production Report</h3><small>${d.date}</small></div></div><table style="width:100%; margin-bottom:15px;" border="1" cellspacing="0" cellpadding="5"><tr><td><b>Line:</b> ${d.line}<br><b>Model:</b> ${d.model}<br><b>Input:</b> ${d.input}</td><td style="text-align:right;"><span style="background:#fff3cd; color:#856404; padding:2px 5px; font-weight:bold;">RMD: ${d.rmdRate}</span><br><span style="background:#cfe2ff; color:#084298; padding:2px 5px; font-weight:bold;">SMT: ${d.smtRate}</span><br><span style="background:#f8d7da; color:#721c24; padding:2px 5px; font-weight:bold;">Process: ${d.procRate}</span></td></tr></table>${aggregated.length > 0 ? `<div style="background:#f1f8ff; padding:10px; border-radius:8px; border:1px dashed #007bff; margin-bottom:15px;"><h4>🏆 Top 3 Defects</h4>${chartImg}<table class="doc-table" border="1" cellspacing="0" cellpadding="5"><thead><tr><th>Rank</th><th>Defect</th><th>Qty</th><th>Rate</th><th>Analysis</th><th>Action</th></tr></thead><tbody>${top3Rows}</tbody></table></div>` : ''}<h5>Full Details</h5><table class="doc-table" border="1" cellspacing="0" cellpadding="5"><thead><tr><th>Defect</th><th>Type</th><th>Qty</th><th>Rate %</th><th>Analysis (Editable)</th></tr></thead><tbody>`;
+    let html = `<div style="padding:20px; background:white;"><div style="display:flex; align-items:center; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:15px;"><img src="https://i.postimg.cc/5y7SN4xc/logo.png" style="height:50px; margin-right:15px;" crossorigin="anonymous"><div><h3 style="margin:0; color:#007bff;">Power Bank Production Report</h3><small>${d.date}</small></div></div><table style="width:100%; margin-bottom:15px;" border="1" cellspacing="0" cellpadding="5"><tr><td><b>Line:</b> ${d.line}<br><b>Model:</b> ${d.model}<br><b>Input:</b> ${d.input}</td><td style="text-align:right;"><span style="background:#fff3cd; color:#856404; padding:2px 5px; font-weight:bold;">RMD: ${d.rmdRate}</span><br><span style="background:#cfe2ff; color:#084298; padding:2px 5px; font-weight:bold;">SMT: ${d.smtRate}</span><br><span style="background:#f8d7da; color:#721c24; padding:2px 5px; font-weight:bold;">Process: ${d.procRate}</span></td></tr></table>${aggregated.length > 0 ? `<div style="background:#f1f8ff; padding:10px; border-radius:8px; border:1px dashed #007bff; margin-bottom:15px;"><h4>🏆 Top 3 Defects</h4>${chartImg}<table class="doc-table" border="1" cellspacing="0" cellpadding="5"><thead><tr><th>Rank</th><th>Defect</th><th>Qty</th><th>Rate</th><th>Analysis</th><th>Action</th></tr></thead><tbody>${top3Rows}</tbody></table></div>` : ''}<h5>Full Details</h5><table class="doc-table" border="1" cellspacing="0" cellpadding="5"><thead><tr><th>Defect</th><th>Type</th><th>Qty</th><th>Rate %</th><th>Analysis (Editable)</th></tr></thead><tbody>`;
     document.querySelectorAll('.defect-row').forEach(r => { let name = r.querySelector('.d-name').value; if(name){ let qty = r.querySelector('.d-qty').value, type = r.querySelector('.d-type').value, rate = r.querySelector('.d-rate').value, ana = r.querySelector('.d-ana').value; html += `<tr><td>${name}</td><td><span class="badge ${type==='RMD'?'bg-rmd': type==='SMT'?'bg-smt':'bg-proc'}">${type}</span></td><td>${qty}</td><td>${rate}</td><td><input type="text" value="${ana}" style="width:100%; border:1px solid #ccc; padding:5px;" onchange="syncAnalysis('${name}', this.value)"></td></tr>`; } });
     html += `</tbody></table></div>`;
     document.getElementById('prevBody').innerHTML = html; document.getElementById('prevModal').style.display = "block";
@@ -488,7 +483,7 @@ async function saveData() {
     document.getElementById('loader').style.display='block'; closeModal();
     let defects = [];
     document.querySelectorAll('.defect-row').forEach(r => { let name = r.querySelector('.d-name').value; if(name) defects.push({ name: name, type: r.querySelector('.d-type').value, qty: r.querySelector('.d-qty').value, ana: r.querySelector('.d-ana').value, action: actionPlanMap[name] || "" }); });
-    try { await fetch(API_URL, { method:'POST', body:JSON.stringify({ action: 'save', batchId: document.getElementById('edit_batch_id').value, date: document.getElementById('e_date').value, line: document.getElementById('e_line').value, model: document.getElementById('e_model').value, input: document.getElementById('e_input').value, prep: document.getElementById('e_prep').value, defects: defects }) }); alert("Data Saved!"); location.reload(); } catch(e) { alert("Error Saving Data"); }
+    try { await fetch(API_URL, { method:'POST', body:JSON.stringify({ action: 'save', batchId: document.getElementById('edit_batch_id').value, date: document.getElementById('e_date').value, line: document.getElementById('e_line').value, model: document.getElementById('e_model').value, input: document.getElementById('e_input').value, prep: document.getElementById('e_prep').value, defects: defects }) }); alert("Data Saved!"); loadData(); } catch(e) { alert("Error Saving Data"); }
     document.getElementById('loader').style.display='none';
 }
 
@@ -503,13 +498,13 @@ async function aiFix(btn) {
 
 function dlPdf(area, name) { const el = document.getElementById(area); const btns = el.querySelectorAll('button, .no-print'); btns.forEach(b => b.style.display = 'none'); html2pdf().set({ margin:0.3, filename:name+'.pdf', html2canvas:{scale:2, useCORS:true}, jsPDF:{unit:'in', format:'a4', orientation:'portrait'} }).from(el).save().then(() => { btns.forEach(b => b.style.display = ''); }); }
 
-function downloadPreviewPDF(event) { const element = document.getElementById('prevBody'); const originalMaxHeight = element.style.maxHeight; const originalOverflow = element.style.overflowY; element.style.maxHeight = 'none'; element.style.overflowY = 'visible'; event.currentTarget.disabled = true; html2pdf().set({ margin:0.3, filename:'Production_Report.pdf', image:{type:'jpeg',quality:0.98}, html2canvas:{scale:2, useCORS:true}, jsPDF:{unit:'in', format:'a4', orientation:'portrait'} }).from(element).save().then(() => { event.currentTarget.disabled = false; element.style.maxHeight = originalMaxHeight; element.style.overflowY = originalOverflow; }); }
+function downloadPreviewPDF(event) { const element = document.getElementById('prevBody'); const originalMaxHeight = element.style.maxHeight; const originalOverflow = element.style.overflowY; element.style.maxHeight = 'none'; element.style.overflowY = 'visible'; event.currentTarget.disabled = true; html2pdf().set({ margin:0.3, filename:'PowerBank_Production_Report.pdf', image:{type:'jpeg',quality:0.98}, html2canvas:{scale:2, useCORS:true}, jsPDF:{unit:'in', format:'a4', orientation:'portrait'} }).from(element).save().then(() => { event.currentTarget.disabled = false; element.style.maxHeight = originalMaxHeight; element.style.overflowY = originalOverflow; }); }
 
 function edit(itemStr) {
     let item = JSON.parse(decodeURIComponent(itemStr));
     switchTab(document.querySelector("button[onclick*='entry']"), 'entry');
     document.getElementById('edit_batch_id').value = item.id;
-    document.getElementById('e_date').value = item.date.split('T')[0];
+    document.getElementById('e_date').value = item.date;
     document.getElementById('e_line').value = item.line;
     document.getElementById('e_model').value = item.model;
     document.getElementById('e_input').value = item.input;
@@ -518,7 +513,7 @@ function edit(itemStr) {
     calcStats();
 }
 
-async function deleteData(id) { if(!confirm("Delete this batch?")) return; document.getElementById('loader').style.display='block'; await fetch(API_URL, { method: 'POST', body: JSON.stringify({ action: 'delete', id: id }) }); location.reload(); }
+async function deleteData(id) { if(!confirm("Delete this batch?")) return; document.getElementById('loader').style.display='block'; await fetch(API_URL, { method: 'POST', body: JSON.stringify({ action: 'delete', id: id }) }); loadData(); document.getElementById('loader').style.display='none'; }
 </script>
 </body>
 </html>
